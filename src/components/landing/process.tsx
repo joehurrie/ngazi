@@ -52,7 +52,7 @@ export default function Process() {
           </ul>
         </div>
 
-        <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-px bg-neutral-200/60 border border-neutral-200/60">
+        <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-px bg-neutral-200/60 border border-neutral-200/60 rounded-xl overflow-hidden">
           {steps.map((step) => (
             <div key={step.num} className="bg-white p-8 hover:bg-neutral-50 transition-colors">
               <div className="w-8 h-8 bg-neutral-100 rounded flex items-center justify-center mb-4 text-neutral-600 font-mono text-xs">
