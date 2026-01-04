@@ -52,8 +52,8 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/#team" className="hover:text-white">
-                      Team
+                    <Link href="/#process" className="hover:text-white">
+                      Process
                     </Link>
                   </li>
                 </ul>

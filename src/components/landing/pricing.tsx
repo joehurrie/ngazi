@@ -48,7 +48,7 @@ export default function Pricing() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
           <div>
             <div className="text-[10px] font-mono uppercase text-neutral-400 mb-4 tracking-widest">
-              07 — Engagement
+              06 — Engagement
             </div>
             <h2 className="text-4xl font-medium tracking-tight text-neutral-900">
               Partnership Models

@@ -7,21 +7,18 @@ const testimonials = [
     company: 'Startup Founder',
     avatar: '45',
     text: 'Ngazi Digital Lab transformed our vision into a stunning, functional app that our users love. Their attention to detail and commitment to our goals were unparalleled. We couldn\'t have asked for a better partner.',
-    rating: 5,
   },
   {
     name: 'Michael B.',
     company: 'Marketing Director, Acme Corp',
     avatar: '55',
     text: 'The team\'s design sense is incredible. They revitalized our brand and delivered a website that not only looks amazing but also performs flawlessly. Our conversion rates have seen a significant boost since the launch.',
-    rating: 5,
   },
   {
     name: 'Emily C.',
     company: 'E-commerce Manager',
     avatar: '65',
     text: 'Working with them was a seamless experience. They are true professionals—responsive, insightful, and incredibly talented. They delivered a product that exceeded all our expectations on a tight deadline.',
-    rating: 5,
   },
 ];
 
@@ -31,7 +28,7 @@ export default function Testimonials() {
       <div className="max-w-[1400px] mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
            <div className="text-[10px] font-mono uppercase text-neutral-400 mb-4 tracking-widest">
-            05 — Testimonials
+            04 — Testimonials
           </div>
           <h2 className="text-4xl font-medium tracking-tight text-neutral-900">
             Trusted by Innovators

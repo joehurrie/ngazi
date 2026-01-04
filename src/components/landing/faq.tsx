@@ -44,7 +44,7 @@ export default function Faq() {
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
           <div className="text-[10px] font-mono uppercase text-neutral-400 mb-4 tracking-widest">
-            06 — FAQs
+            05 — FAQs
           </div>
           <h2 className="text-4xl font-medium tracking-tight text-neutral-900">
             Common Questions
