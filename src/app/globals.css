@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --foreground: 0 0% 9%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card-foreground: 0 0% 9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
+    --popover-foreground: 0 0% 9%;
     --primary: 0 0% 9%;
     --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 96.1%;
@@ -32,7 +32,7 @@ body {
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
+    --radius: 0.75rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -84,5 +84,179 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    letter-spacing: -0.015em;
+  }
+  ::selection {
+    @apply bg-neutral-900 text-white;
   }
 }
+
+/* --- TECHNICAL GRID (LIGHT MODE) --- */
+.technical-grid {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    mask-image: linear-gradient(to bottom, transparent 2%, black 40%, black 80%, transparent 98%);
+}
+
+/* --- ANIMATED GLOWING BORDER (CLOCKWISE) --- */
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.clockwise-glow {
+    position: relative;
+    border-radius: 0.75rem; /* rounded-xl */
+    z-index: 1;
+    overflow: hidden;
+}
+
+.clockwise-glow::before, .clockwise-glow::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: conic-gradient(from var(--angle), transparent 70%, #a3a3a3, #171717);
+    z-index: -1;
+    border-radius: 0.8rem;
+    animation: rotate 4s linear infinite;
+}
+
+.clockwise-glow::after {
+    filter: blur(10px);
+    opacity: 0.5;
+}
+
+/* Inner content mask to create the border effect */
+.clockwise-glow-inner {
+    background: #ffffff;
+    border-radius: 0.75rem;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes rotate {
+    0% { --angle: 0deg; }
+    100% { --angle: 360deg; }
+}
+
+/* --- CUSTOM TOGGLE SWITCH (LIGHT) --- */
+.toggle-switch {
+    width: 36px;
+    height: 20px;
+    background: #e5e5e5;
+    border-radius: 99px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+}
+.toggle-switch::after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.toggle-switch.active {
+    background: #171717;
+}
+.toggle-switch.active::after {
+    transform: translateX(16px);
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); filter: blur(4px); }
+    to { opacity: 1; transform: translateY(0); filter: blur(0px); }
+}
+.animate-on-scroll { opacity: 0; }
+.animate-on-scroll.animate {
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* --- NOISE TEXTURE (SUBTLE) --- */
+.noise-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 50;
+    mix-blend-mode: multiply;
+}
+
+/* --- MARQUEE --- */
+.marquee-wrapper {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+.marquee-content {
+    display: flex;
+    gap: 4rem;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+@keyframes scroll {
+    to { transform: translateX(-50%); }
+}
+
+/* --- SHINY BUTTON (LIGHT THEME ADAPTATION) --- */
+.shiny-btn {
+    position: relative;
+    overflow: hidden;
+    background: #171717;
+    color: white;
+    transition: transform 0.2s;
+}
+.shiny-btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+.shiny-btn:hover::before {
+    left: 100%;
+}
+
+/* --- THE 3D WALL --- */
+.wall-container {
+    perspective: 1500px;
+    transform-style: preserve-3d;
+}
+.wall-grid {
+    transform: rotateY(-12deg) rotateX(5deg) rotateZ(-2deg) scale(1.05);
+    transform-style: preserve-3d;
+}
+.wall-column-up { animation: scrollUp 45s linear infinite; }
+.wall-column-down { animation: scrollDown 45s linear infinite; }
+
+@keyframes scrollUp { from { transform: translateY(0); } to { transform: translateY(-50%); } }
+@keyframes scrollDown { from { transform: translateY(-50%); } to { transform: translateY(0); } }
+
+.wall-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.wall-card:hover {
+    transform: translateZ(10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    border-color: rgba(0,0,0,0.1);
+}
+
+/* --- CUSTOM SCROLLBAR --- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d4d4d4; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #a3a3a3; }
