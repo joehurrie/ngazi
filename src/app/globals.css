@@ -246,7 +246,7 @@ body {
     transform-style: preserve-3d;
 }
 .wall-grid {
-    transform: rotateY(-12deg) rotateX(5deg) rotateZ(-2deg) scale(1.05);
+    transform: scale(1.05);
     transform-style: preserve-3d;
 }
 .wall-column-up { animation: scrollUp 45s linear infinite; }
