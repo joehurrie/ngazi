@@ -99,37 +99,44 @@ body {
     mask-image: linear-gradient(to bottom, transparent 2%, black 40%, black 80%, transparent 98%);
 }
 
-/* --- ANIMATED GLOWING BORDER (CLOCKWISE) --- */
+/* --- ANIMATED GLOWING BORDER (CLOCKWISE & COUNTER-CLOCKWISE) --- */
 @property --angle {
     syntax: '<angle>';
     initial-value: 0deg;
     inherits: false;
 }
 
-.clockwise-glow {
+.glowing-border {
     position: relative;
     border-radius: 0.75rem; /* rounded-xl */
     z-index: 1;
     overflow: hidden;
 }
 
-.clockwise-glow::before, .clockwise-glow::after {
+.glowing-border::before, .glowing-border::after {
     content: '';
     position: absolute;
     inset: -2px;
     background: conic-gradient(from var(--angle), transparent 70%, #a3a3a3, #171717);
     z-index: -1;
     border-radius: 0.8rem;
-    animation: rotate 4s linear infinite;
 }
 
-.clockwise-glow::after {
+.glowing-border.clockwise::before, .glowing-border.clockwise::after {
+    animation: rotate-clockwise 4s linear infinite;
+}
+
+.glowing-border.counter-clockwise::before, .glowing-border.counter-clockwise::after {
+    animation: rotate-counter-clockwise 4s linear infinite;
+}
+
+.glowing-border::after {
     filter: blur(10px);
     opacity: 0.5;
 }
 
 /* Inner content mask to create the border effect */
-.clockwise-glow-inner {
+.glowing-border-inner {
     background: #ffffff;
     border-radius: 0.75rem;
     height: 100%;
@@ -138,10 +145,16 @@ body {
     z-index: 2;
 }
 
-@keyframes rotate {
+@keyframes rotate-clockwise {
     0% { --angle: 0deg; }
     100% { --angle: 360deg; }
 }
+
+@keyframes rotate-counter-clockwise {
+    0% { --angle: 360deg; }
+    100% { --angle: 0deg; }
+}
+
 
 /* --- CUSTOM TOGGLE SWITCH (LIGHT) --- */
 .toggle-switch {

@@ -1,4 +1,3 @@
-import { Star } from 'lucide-react';
 import Image from 'next/image';
 import { AnimateOnScroll } from '../client/animate-on-scroll';
 
@@ -21,18 +20,10 @@ const testimonials = [
     name: 'Emily C.',
     company: 'E-commerce Manager',
     avatar: '65',
-    text: "Working with them was a seamless experience. They are true professionals—responsive, insightful, and incredibly talented. They delivered a product that exceeded all our expectations on a tight deadline.",
+    text: 'Working with them was a seamless experience. They are true professionals—responsive, insightful, and incredibly talented. They delivered a product that exceeded all our expectations on a tight deadline.',
     rating: 5,
   },
 ];
-
-const Rating = ({ rating }: { rating: number }) => (
-  <div className="flex items-center gap-0.5 text-yellow-500">
-    {Array.from({ length: rating }).map((_, i) => (
-      <Star key={i} size={14} fill="currentColor" />
-    ))}
-  </div>
-);
 
 export default function Testimonials() {
   return (
@@ -58,12 +49,11 @@ export default function Testimonials() {
               className="bg-white p-8 rounded-xl border border-neutral-200/80 flex flex-col justify-between"
             >
               <div>
-                <Rating rating={testimonial.rating} />
                 <p className="text-neutral-600 my-6 font-light leading-relaxed">
                   "{testimonial.text}"
                 </p>
               </div>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 mt-auto pt-6 border-t border-neutral-100">
                 <Image
                   src={`https://picsum.photos/seed/${testimonial.avatar}/100/100`}
                   alt={`Avatar of ${testimonial.name}`}
