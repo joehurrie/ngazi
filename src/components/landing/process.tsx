@@ -1,3 +1,4 @@
+
 import { CheckCircle } from 'lucide-react';
 import { AnimateOnScroll } from '../client/animate-on-scroll';
 
@@ -31,8 +32,8 @@ export default function Process() {
       id="process"
       className="max-w-[1400px] mx-auto px-6 py-24 md:py-32 border-b border-neutral-200/60"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-24">
-        <div className="lg:sticky lg:top-24 self-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+        <div className="sticky top-24 self-start">
           <AnimateOnScroll>
             <div className="text-[10px] font-mono uppercase text-neutral-400 mb-4 tracking-widest">
               03 — Methodology
@@ -55,11 +56,11 @@ export default function Process() {
           </AnimateOnScroll>
         </div>
 
-        <div className="lg:col-span-2 space-y-8">
+        <div className="space-y-8">
           {steps.map((step, index) => (
             <AnimateOnScroll
               key={step.num}
-              className="lg:sticky p-8 border border-neutral-200/60 rounded-xl bg-white/50 backdrop-blur-sm shadow-lg shadow-neutral-100/50"
+              className="sticky p-8 border border-neutral-200/60 rounded-xl bg-white/50 backdrop-blur-sm shadow-lg shadow-neutral-100/50"
               style={{ top: `calc(6rem + ${index * 2}rem)`, animationDelay: `${index * 100}ms` }}
             >
               <div className="flex items-start gap-6">
