@@ -8,7 +8,7 @@ export default function Footer() {
         {/* Top section */}
         <div className="relative grid grid-cols-1 md:grid-cols-2 items-end py-16 md:py-24 overflow-hidden gap-8 md:gap-0">
           <div>
-            <h2 className="text-[8rem] sm:text-[10rem] md:text-[14rem] lg:text-[18rem] font-medium tracking-tighter text-white/5 leading-none select-none">
+            <h2 className="text-[8rem] sm:text-[10rem] md:text-[14rem] lg:text-[18rem] font-bold tracking-tighter text-white/5 leading-none select-none">
               NGAZI
             </h2>
           </div>
