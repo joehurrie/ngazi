@@ -44,7 +44,7 @@ export default function Services() {
       id="services"
       className="relative overflow-hidden border-b border-neutral-200/60 bg-neutral-50/30"
     >
-      <div className="max-w-[1400px] mx-auto px-6 py-20 lg:py-32 grid grid-cols-1 gap-16">
+      <div className="max-w-[1400px] mx-auto px-6 py-20 lg:py-32 grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div className="relative z-10">
           <div className="text-[10px] font-mono uppercase text-neutral-400 mb-6 tracking-widest">
             01 — Expertise
