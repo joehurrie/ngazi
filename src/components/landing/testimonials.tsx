@@ -6,13 +6,13 @@ const testimonials = [
     name: 'Sarah L.',
     company: 'Startup Founder',
     avatar: '45',
-    text: 'Ngazi Digital Lab transformed our vision into a stunning, functional app that our users love. Their attention to detail and commitment to our goals were unparalleled. We couldn\'t have asked for a better partner.',
+    text: "Ngazi Digital Lab transformed our vision into a stunning, functional app that our users love. Their attention to detail and commitment to our goals were unparalleled. We couldn't have asked for a better partner.",
   },
   {
     name: 'Michael B.',
     company: 'Marketing Director, Acme Corp',
     avatar: '55',
-    text: 'The team\'s design sense is incredible. They revitalized our brand and delivered a website that not only looks amazing but also performs flawlessly. Our conversion rates have seen a significant boost since the launch.',
+    text: "The team's design sense is incredible. They revitalized our brand and delivered a website that not only looks amazing but also performs flawlessly. Our conversion rates have seen a significant boost since the launch.",
   },
   {
     name: 'Emily C.',
@@ -24,10 +24,13 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="bg-neutral-50/50 py-24 md:py-32 border-b border-neutral-200/60">
+    <section
+      id="testimonials"
+      className="bg-neutral-50/50 py-24 md:py-32 border-b border-neutral-200/60"
+    >
       <div className="max-w-[1400px] mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-           <div className="text-[10px] font-mono uppercase text-neutral-400 mb-4 tracking-widest">
+        <AnimateOnScroll className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-[10px] font-mono uppercase text-neutral-400 mb-4 tracking-widest">
             04 — Testimonials
           </div>
           <h2 className="text-4xl font-medium tracking-tight text-neutral-900">
@@ -36,7 +39,7 @@ export default function Testimonials() {
           <p className="mt-4 text-lg text-neutral-500 font-light">
             Hear what our clients have to say about their experience working with us.
           </p>
-        </div>
+        </AnimateOnScroll>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (

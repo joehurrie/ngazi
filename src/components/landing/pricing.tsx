@@ -2,6 +2,7 @@ import { Check, Zap } from 'lucide-react';
 import { Button } from '../ui/button';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import { AnimateOnScroll } from '../client/animate-on-scroll';
 
 const plans = [
   {
@@ -45,34 +46,40 @@ export default function Pricing() {
       className="bg-neutral-50/50 py-24 md:py-32 border-b border-neutral-200/60"
     >
       <div className="max-w-[1400px] mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16">
-          <div>
-            <div className="text-[10px] font-mono uppercase text-neutral-400 mb-4 tracking-widest">
-              06 — Engagement
+        <AnimateOnScroll>
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+            <div>
+              <div className="text-[10px] font-mono uppercase text-neutral-400 mb-4 tracking-widest">
+                06 — Engagement
+              </div>
+              <h2 className="text-4xl font-medium tracking-tight text-neutral-900">
+                Partnership Models
+              </h2>
             </div>
-            <h2 className="text-4xl font-medium tracking-tight text-neutral-900">
-              Partnership Models
-            </h2>
-          </div>
 
-          <div className="flex items-center gap-1 mt-6 md:mt-0 bg-white p-1 rounded-full border border-neutral-200">
-            <Button size="sm" className="px-4 py-1.5 rounded-full text-[10px] font-medium tracking-wide shadow-sm h-auto">
-              Monthly
-            </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              className="px-4 py-1.5 rounded-full text-neutral-500 text-[10px] font-medium tracking-wide hover:text-neutral-900 h-auto"
-            >
-              Quarterly
-            </Button>
+            <div className="flex items-center gap-1 mt-6 md:mt-0 bg-white p-1 rounded-full border border-neutral-200">
+              <Button
+                size="sm"
+                className="px-4 py-1.5 rounded-full text-[10px] font-medium tracking-wide shadow-sm h-auto"
+              >
+                Monthly
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="px-4 py-1.5 rounded-full text-neutral-500 text-[10px] font-medium tracking-wide hover:text-neutral-900 h-auto"
+              >
+                Quarterly
+              </Button>
+            </div>
           </div>
-        </div>
+        </AnimateOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {plans.map((plan, index) => (
-            <div
+            <AnimateOnScroll
               key={index}
+              style={{ animationDelay: `${index * 100}ms` }}
               className={cn(
                 'p-8 rounded-xl border flex flex-col justify-between relative overflow-hidden transition-all duration-300',
                 plan.featured
@@ -125,11 +132,14 @@ export default function Pricing() {
               <Button
                 asChild
                 variant={plan.featured ? 'secondary' : 'outline'}
-                className={cn('w-full text-xs font-medium', !plan.featured && "text-neutral-600 hover:text-neutral-900 hover:border-neutral-900")}
+                className={cn(
+                  'w-full text-xs font-medium',
+                  !plan.featured && 'text-neutral-600 hover:text-neutral-900 hover:border-neutral-900'
+                )}
               >
                 <Link href="/contact">{plan.cta}</Link>
               </Button>
-            </div>
+            </AnimateOnScroll>
           ))}
         </div>
       </div>
