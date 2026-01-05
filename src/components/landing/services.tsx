@@ -33,7 +33,7 @@ const wallCardsCol2 = [
 ];
 
 const WallCard = ({ icon: Icon, text }: { icon: React.ElementType, text: string }) => (
-  <div className="wall-card w-32 lg:w-48 h-24 rounded-xl p-4 flex flex-col justify-between">
+  <div className="wall-card w-32 lg:w-48 h-24 rounded-xl p-4 flex flex-col justify-between shadow-lg shadow-neutral-100/50">
     <Icon size={24} className="text-neutral-800" strokeWidth={1.5} />
     <span className="text-xs font-mono text-neutral-500">{text}</span>
   </div>
