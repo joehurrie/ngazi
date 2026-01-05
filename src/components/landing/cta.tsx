@@ -13,9 +13,7 @@ export default function Cta() {
             Ready to get started?
           </h2>
           <p className="mt-4 text-lg text-neutral-500 font-light">
-            Have a project in mind? We&apos;d love to hear about it.
-            <br />
-            Let&apos;s team up to create something incredible.
+            Let&apos;s create something your users will love.
           </p>
           <Button asChild className="mt-10 shiny-btn px-8 py-3.5 rounded-full text-xs font-semibold tracking-widest uppercase">
             <Link href="/contact">Start a Project</Link>
