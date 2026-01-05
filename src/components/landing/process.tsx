@@ -33,7 +33,7 @@ export default function Process() {
       className="max-w-[1400px] mx-auto px-6 py-24 md:py-32 border-b border-neutral-200/60"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
-        <div className="sticky top-24 self-start">
+        <div className="md:sticky top-24 self-start">
           <AnimateOnScroll>
             <div className="text-[10px] font-mono uppercase text-neutral-400 mb-4 tracking-widest">
               03 — Methodology
@@ -60,8 +60,8 @@ export default function Process() {
           {steps.map((step, index) => (
             <AnimateOnScroll
               key={step.num}
-              className="sticky p-8 border border-neutral-200/60 rounded-xl bg-white/50 backdrop-blur-sm shadow-lg shadow-neutral-100/50"
-              style={{ top: `calc(6rem + ${index * 2}rem)`, animationDelay: `${index * 100}ms` }}
+              className="p-8 border border-neutral-200/60 rounded-xl bg-white/50 backdrop-blur-sm shadow-lg shadow-neutral-100/50"
+              style={index > 0 ? { position: 'sticky', top: `calc(6rem + ${index * 2}rem)` } : {}}
             >
               <div className="flex items-start gap-6">
                 <div className="w-8 h-8 bg-neutral-100 rounded flex items-center justify-center mb-4 text-neutral-600 font-mono text-xs shrink-0 mt-1">
