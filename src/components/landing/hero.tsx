@@ -54,7 +54,7 @@ export default function Hero() {
             </Button>
             <div className="h-px w-12 bg-neutral-200 hidden md:block"></div>
             <span className="text-[10px] font-mono text-neutral-400 uppercase hidden md:block">
-              Scroll Down
+              Portfolio
             </span>
           </div>
         </AnimateOnScroll>
