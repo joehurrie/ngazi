@@ -2,12 +2,13 @@ import Link from 'next/link';
 import { Button } from '../ui/button';
 import { AnimateOnScroll } from '../client/animate-on-scroll';
 import { GlowingBorderCard } from '../ui/glowing-border-card';
+import { ArrowRight, Twitter, Instagram, Dribbble, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   return (
     <>
-      <section className="bg-white">
-        <div className="max-w-[1400px] mx-auto px-6 py-32">
+      <section className="bg-white py-24 md:py-32">
+        <div className="max-w-[1400px] mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <AnimateOnScroll>
               <h2 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter text-neutral-900 leading-[0.95] mb-10">
@@ -39,113 +40,78 @@ export default function Footer() {
         </div>
       </section>
       <footer className="bg-neutral-900 text-neutral-400 font-light relative z-20">
-        <div className="max-w-[1400px] mx-auto px-6 pt-24 pb-12">
-          {/* Top Section */}
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
-            <h2 className="text-5xl md:text-8xl lg:text-[10rem] font-bold leading-none tracking-tighter text-neutral-800/50 select-none -ml-1 md:-ml-4">
-              NGAZI
-            </h2>
-            <div className="text-left md:text-right">
-              <p className="text-sm text-neutral-500 mb-2">Have a project in mind?</p>
-              <a
-                href="mailto:hello@ngazi.lab"
-                className="text-2xl md:text-3xl font-medium text-white hover:text-neutral-300 transition-colors"
-              >
-                hello@ngazi.lab
-              </a>
-              <p className="text-sm text-neutral-500 mt-2">Nairobi • Remote Worldwide</p>
+        <div className="max-w-[1400px] mx-auto px-6 py-20">
+          <div className="grid md:grid-cols-12 gap-8">
+            {/* Left Column: Brand & Subscribe */}
+            <div className="md:col-span-5 lg:col-span-4">
+              <Link href="/" className="flex items-center gap-3 mb-6">
+                <div className="w-5 h-5 bg-white flex items-center justify-center rounded-sm">
+                  <div className="w-2 h-2 bg-neutral-900"></div>
+                </div>
+                <span className="text-xs font-semibold tracking-wide text-white uppercase">
+                  Ngazi Digital Lab
+                </span>
+              </Link>
+              <p className="text-sm text-neutral-500 max-w-xs mb-6">
+                A design and development studio building for the next generation of the internet.
+              </p>
+              <form className="flex gap-2">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="bg-neutral-800 border border-neutral-700 text-white placeholder:text-neutral-500 text-sm rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-neutral-600"
+                />
+                <Button variant="ghost" size="icon" className="bg-neutral-800 border border-neutral-700 hover:bg-neutral-700">
+                  <ArrowRight size={16} />
+                </Button>
+              </form>
+            </div>
+
+            {/* Right Column: Links */}
+            <div className="md:col-span-7 lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8">
+              <div>
+                <h4 className="text-[10px] font-mono uppercase text-neutral-500 mb-4 tracking-widest">
+                  Sitemap
+                </h4>
+                <ul className="space-y-3">
+                  <li><Link href="/#work" className="hover:text-white transition-colors">Work</Link></li>
+                  <li><Link href="/#services" className="hover:text-white transition-colors">Services</Link></li>
+                  <li><Link href="/#process" className="hover:text-white transition-colors">Process</Link></li>
+                  <li><Link href="/contact" className="hover:text-white transition-colors">Agency</Link></li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-[10px] font-mono uppercase text-neutral-500 mb-4 tracking-widest">
+                  Socials
+                </h4>
+                <ul className="space-y-3">
+                  <li><a href="#" className="hover:text-white transition-colors">LinkedIn</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">Twitter / X</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">Dribbble</a></li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-[10px] font-mono uppercase text-neutral-500 mb-4 tracking-widest">
+                  Connect
+                </h4>
+                <ul className="space-y-3">
+                  <li><a href="mailto:hello@ngazi.lab" className="hover:text-white transition-colors">hello@ngazi.lab</a></li>
+                  <li className="text-neutral-500">Nairobi • Remote</li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          {/* Separator */}
-          <div className="border-t border-neutral-800"></div>
-
-          {/* Bottom Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 text-sm">
-            {/* Sitemap */}
-            <div>
-              <h4 className="text-[10px] font-mono uppercase text-neutral-500 mb-4 tracking-widest">
-                Sitemap
-              </h4>
-              <ul className="space-y-3">
-                <li>
-                  <Link href="/#work" className="hover:text-white transition-colors">
-                    Work
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/#services" className="hover:text-white transition-colors">
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/#process" className="hover:text-white transition-colors">
-                    Process
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-white transition-colors">
-                    Agency
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Socials */}
-            <div>
-              <h4 className="text-[10px] font-mono uppercase text-neutral-500 mb-4 tracking-widest">
-                Socials
-              </h4>
-              <ul className="space-y-3">
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    LinkedIn
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Twitter / X
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Instagram
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Dribbble
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Legal */}
-            <div>
-              <h4 className="text-[10px] font-mono uppercase text-neutral-500 mb-4 tracking-widest">
-                Legal
-              </h4>
-              <ul className="space-y-3">
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white transition-colors">
-                    Terms of Service
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Copyright */}
-            <div className="col-span-2 md:col-span-1 md:text-right self-end">
-              <p className="text-[10px] text-neutral-600 uppercase tracking-wide">
-                © 2024 Ngazi Digital Lab.
-                <br />
-                All rights reserved.
-              </p>
+          <div className="border-t border-neutral-800 mt-16 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs">
+            <p className="text-neutral-500 order-2 sm:order-1 mt-4 sm:mt-0">
+              © 2024 Ngazi Digital Lab. All rights reserved.
+            </p>
+            <div className="flex gap-4 order-1 sm:order-2">
+              <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>
