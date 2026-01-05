@@ -45,20 +45,20 @@ export default function Services() {
       className="relative overflow-hidden border-b border-neutral-200/60 bg-neutral-50/30"
     >
       <div className="max-w-[1400px] mx-auto flex flex-col">
-        <div className="w-full px-6 py-20 lg:py-32 flex flex-col justify-center relative z-10">
+        <div className="w-full px-6 py-20 lg:py-32 flex flex-col justify-center items-center text-center relative z-10">
           <div className="text-[10px] font-mono uppercase text-neutral-400 mb-6 tracking-widest">
             01 — Expertise
           </div>
-          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-neutral-900 mb-8 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-neutral-900 mb-8 leading-tight max-w-2xl">
             Modern Tech Stack
             <br />
             <span className="text-neutral-400">Custom Solutions</span>
           </h2>
 
-          <div className="space-y-10 max-w-md">
+          <div className="space-y-10 max-w-md text-left">
             {services.map((service, index) => (
               <div key={index} className="flex gap-5 group">
-                <div className="w-10 h-10 rounded-lg bg-white border border-neutral-200 flex items-center justify-center shadow-sm group-hover:border-neutral-400 transition-colors">
+                <div className="w-10 h-10 rounded-lg bg-white border border-neutral-200 flex items-center justify-center shadow-sm group-hover:border-neutral-400 transition-colors shrink-0">
                   <service.icon className="text-neutral-700" size={20} strokeWidth={1.5} />
                 </div>
                 <div>
@@ -72,20 +72,18 @@ export default function Services() {
           </div>
         </div>
         
-        <div className="w-full">
-          <div className="relative h-[600px] overflow-hidden pointer-events-none mt-12 lg:mt-0">
-            <div className="wall-container w-full h-full absolute sm:right-[-40%] md:right-[-30%] lg:right-[-20%] scale-90 sm:scale-100">
-              <div className="wall-grid flex gap-6">
-                <div className="wall-column-up flex flex-col gap-6">
-                  {[...wallCardsCol1, ...wallCardsCol1.slice(0, 2)].map((card, index) => (
-                    <WallCard key={`col1-${index}`} icon={card.icon} text={card.text} />
-                  ))}
-                </div>
-                <div className="wall-column-down flex flex-col gap-6 pt-20">
-                  {[...wallCardsCol2, ...wallCardsCol2.slice(0, 2)].map((card, index) => (
-                    <WallCard key={`col2-${index}`} icon={card.icon} text={card.text} />
-                  ))}
-                </div>
+        <div className="w-full h-[500px] overflow-hidden">
+          <div className="relative h-full wall-container flex justify-center">
+            <div className="wall-grid flex gap-6">
+              <div className="wall-column-up flex flex-col gap-6">
+                {[...wallCardsCol1, ...wallCardsCol1].map((card, index) => (
+                  <WallCard key={`col1-${index}`} icon={card.icon} text={card.text} />
+                ))}
+              </div>
+              <div className="wall-column-down flex flex-col gap-6 pt-20">
+                {[...wallCardsCol2, ...wallCardsCol2].map((card, index) => (
+                  <WallCard key={`col2-${index}`} icon={card.icon} text={card.text} />
+                ))}
               </div>
             </div>
           </div>
