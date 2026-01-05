@@ -27,10 +27,12 @@ export default function RootLayout({
       </head>
       <body className="font-body bg-white text-neutral-900 pt-16">
         <div className="noise-overlay"></div>
-        <div className="fixed inset-0 pointer-events-none z-0 technical-grid"></div>
+        <div className="fixed inset-0 pointer-events-none z-0">
+          <div className="absolute top-0 left-0 h-[1600px] w-full technical-grid"></div>
+        </div>
         <div className="fixed inset-0 pointer-events-none z-0 max-w-[1400px] mx-auto border-x border-dashed border-neutral-200/60">
-          <div className="absolute left-1/3 h-full w-px border-l border-dashed border-neutral-200/60"></div>
-          <div className="absolute left-2/3 h-full w-px border-l border-dashed border-neutral-200/60"></div>
+          <div className="absolute left-1/3 h-[1600px] w-px border-l border-dashed border-neutral-200/60"></div>
+          <div className="absolute left-2/3 h-[1600px] w-px border-l border-dashed border-neutral-200/60"></div>
         </div>
 
         <Header />
