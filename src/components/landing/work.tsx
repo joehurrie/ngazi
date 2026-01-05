@@ -60,9 +60,8 @@ export default function Work() {
                    <Image
                       src={project.imageUrl}
                       alt={project.title}
-                      width={600}
-                      height={400}
-                      className="object-contain w-auto h-auto max-h-full max-w-full p-8 grayscale group-hover:grayscale-0 transition-all duration-500"
+                      fill
+                      className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                       data-ai-hint={project.imageHint}
                    />
                 )}
