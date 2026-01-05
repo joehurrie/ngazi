@@ -53,15 +53,16 @@ export default function Work() {
           <div key={index}>
             <GlowingBorderCard
               animationDirection={project.animationDirection as 'clockwise' | 'counter-clockwise'}
-              className="p-8 flex flex-col justify-between h-[500px]"
+              className="p-8 flex flex-col justify-between"
             >
-              <div className="mb-8 relative rounded-lg overflow-hidden h-full group">
+              <div className="mb-8 relative h-[350px] rounded-lg overflow-hidden group bg-neutral-100 flex items-center justify-center">
                 {project.imageUrl && (
                    <Image
                       src={project.imageUrl}
                       alt={project.title}
-                      fill
-                      className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                      width={600}
+                      height={400}
+                      className="object-contain w-auto h-auto max-h-full max-w-full p-8 grayscale group-hover:grayscale-0 transition-all duration-500"
                       data-ai-hint={project.imageHint}
                    />
                 )}

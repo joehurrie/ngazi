@@ -3,13 +3,13 @@
     {
       "id": "fintech-dashboard",
       "description": "A placeholder image for a fintech dashboard project.",
-      "imageUrl": "https://images.unsplash.com/photo-1545987796-200677ee1011?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxkYXRhJTIwYW5hbHl0aWNzfGVufDB8fHx8MTc2NzQ4NjcxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkYXRhJTIwYW5hbHl0aWNzfGVufDB8fHx8MTc2NzQ4NjcxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "data analytics"
     },
     {
       "id": "ecommerce-mobile-app",
       "description": "A placeholder image for an e-commerce mobile app project.",
-      "imageUrl": "https://images.unsplash.com/photo-1543428390-52250776dd46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2JpbGUlMjBzaG9wcGluZ3xlbnwwfHx8fDE3Njc1ODA5NTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://picsum.photos/seed/ecommerce/600/400",
       "imageHint": "mobile shopping"
     }
   ]
