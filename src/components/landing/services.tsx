@@ -43,8 +43,8 @@ export default function Services() {
       id="services"
       className="relative overflow-hidden border-b border-neutral-200/60 bg-neutral-50/30"
     >
-      <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row min-h-[800px]">
-        <div className="w-full lg:w-1/2 px-6 py-20 lg:py-32 flex flex-col justify-center relative z-10 bg-gradient-to-r from-white via-white to-transparent">
+      <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row lg:min-h-[800px]">
+        <div className="w-full lg:w-1/2 px-6 py-20 lg:py-32 flex flex-col justify-center relative z-10 lg:bg-gradient-to-r from-white via-white to-transparent">
           <div className="text-[10px] font-mono uppercase text-neutral-400 mb-6 tracking-widest">
             01 — Expertise
           </div>
@@ -71,7 +71,7 @@ export default function Services() {
           </div>
         </div>
         
-        <div className="absolute lg:relative right-0 top-0 bottom-0 w-full lg:w-1/2 h-[600px] lg:h-auto overflow-hidden opacity-30 lg:opacity-100 pointer-events-none lg:pointer-events-auto">
+        <div className="lg:absolute right-0 top-0 bottom-0 w-full lg:w-1/2 h-[600px] lg:h-auto overflow-hidden pointer-events-none lg:pointer-events-auto">
           <div className="wall-container w-full h-full absolute top-[-10%] right-[-20%]">
             <div className="wall-grid flex gap-6">
               <div className="wall-column-up flex flex-col gap-6">
