@@ -24,15 +24,9 @@ export default function Home() {
       <AnimateOnScroll>
         <Process />
       </AnimateOnScroll>
-      <AnimateOnScroll>
-        <Testimonials />
-      </AnimateOnScroll>
-      <AnimateOnScroll>
-        <Faq />
-      </AnimateOnScroll>
-      <AnimateOnScroll>
-        <Cta />
-      </AnimateOnScroll>
+      <Testimonials />
+      <Faq />
+      <Cta />
     </>
   );
 }
