@@ -1,34 +1,31 @@
 import Link from 'next/link';
 import { Button } from '../ui/button';
-import { GlowingBorderCard } from '../ui/glowing-border-card';
 import { AnimateOnScroll } from '../client/animate-on-scroll';
 
 export default function Cta() {
   return (
-    <section className="max-w-[1400px] mx-auto px-6 py-32">
-      <div className="rounded-2xl p-12 md:p-24 text-center relative overflow-hidden isolate">
-        <div className="relative z-10 max-w-2xl mx-auto">
+    <section className="bg-neutral-900 text-white">
+      <div className="max-w-[1400px] mx-auto px-6 py-32">
+        <div className="max-w-4xl mx-auto text-center">
           <AnimateOnScroll>
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter text-neutral-900 leading-[0.95] mb-8">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter leading-[0.95] mb-10">
               Ready to scale?
             </h2>
-            <p className="text-neutral-500 font-light text-lg mb-10">
+            <p className="text-neutral-400 font-light text-lg mb-12 max-w-2xl mx-auto">
               Join forward-thinking companies transforming their digital presence with Ngazi Digital
               Lab.
             </p>
           </AnimateOnScroll>
           <AnimateOnScroll style={{ animationDelay: '100ms' }}>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <GlowingBorderCard animationDirection="clockwise" className="rounded-lg">
-                <Button asChild size="lg" className="w-full shiny-btn">
-                  <Link href="/contact">Get Started</Link>
-                </Button>
-              </GlowingBorderCard>
+              <Button asChild size="lg" className="shiny-btn bg-white text-neutral-900 hover:bg-neutral-200">
+                <Link href="/contact">Get Started</Link>
+              </Button>
               <Button
                 asChild
                 size="lg"
-                className="px-8 py-4 text-xs font-semibold rounded-lg tracking-widest uppercase"
                 variant="outline"
+                className="border-neutral-700 hover:border-white hover:text-white"
               >
                 <Link href="/contact">Book a Call</Link>
               </Button>

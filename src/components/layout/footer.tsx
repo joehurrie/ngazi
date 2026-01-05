@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-[1400px] mx-auto px-6 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
           <div>
-            <h2 className="text-[10rem] font-bold leading-none tracking-tighter text-white">
+            <h2 className="text-5xl md:text-[10rem] font-bold leading-none tracking-tighter text-white">
               NGAZI
             </h2>
             <p className="font-mono text-sm uppercase tracking-widest text-neutral-400 mt-4">
