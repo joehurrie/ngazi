@@ -1,3 +1,4 @@
+
 import { Layers, MonitorSmartphone, PenTool, Smartphone, Globe, Palette, Zap, Layout, Code } from 'lucide-react';
 
 const services = [
@@ -71,22 +72,24 @@ export default function Services() {
           </div>
         </div>
         
-        <div className="lg:absolute right-0 top-0 bottom-0 w-full lg:w-1/2 h-[600px] lg:h-auto overflow-hidden pointer-events-none lg:pointer-events-auto">
-          <div className="wall-container w-full h-full absolute top-[-10%] right-[-20%]">
-            <div className="wall-grid flex gap-6">
-              <div className="wall-column-up flex flex-col gap-6">
-                {[...wallCardsCol1, ...wallCardsCol1.slice(0, 2)].map((card, index) => (
-                  <WallCard key={`col1-${index}`} icon={card.icon} text={card.text} />
-                ))}
-              </div>
-              <div className="wall-column-down flex flex-col gap-6 pt-20">
-                {[...wallCardsCol2, ...wallCardsCol2.slice(0, 2)].map((card, index) => (
-                  <WallCard key={`col2-${index}`} icon={card.icon} text={card.text} />
-                ))}
+        <div className="w-full lg:w-1/2 lg:absolute lg:right-0 lg:top-0 lg:bottom-0">
+          <div className="relative h-[600px] lg:h-full overflow-hidden pointer-events-none lg:pointer-events-auto mt-12 lg:mt-0">
+            <div className="wall-container w-full h-full absolute top-[-10%] right-[-20%]">
+              <div className="wall-grid flex gap-6">
+                <div className="wall-column-up flex flex-col gap-6">
+                  {[...wallCardsCol1, ...wallCardsCol1.slice(0, 2)].map((card, index) => (
+                    <WallCard key={`col1-${index}`} icon={card.icon} text={card.text} />
+                  ))}
+                </div>
+                <div className="wall-column-down flex flex-col gap-6 pt-20">
+                  {[...wallCardsCol2, ...wallCardsCol2.slice(0, 2)].map((card, index) => (
+                    <WallCard key={`col2-${index}`} icon={card.icon} text={card.text} />
+                  ))}
+                </div>
               </div>
             </div>
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-white z-20"></div>
           </div>
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-white z-20"></div>
         </div>
       </div>
     </section>
