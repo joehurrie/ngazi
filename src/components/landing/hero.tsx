@@ -50,7 +50,7 @@ export default function Hero() {
               asChild
               className="shiny-btn px-8 py-3.5 rounded-full text-xs font-semibold tracking-widest uppercase"
             >
-              <Link href="/contact">Start Project</Link>
+              <Link href="/contact">Get Started</Link>
             </Button>
             <div className="h-px w-12 bg-neutral-200 hidden md:block"></div>
             <span className="text-[10px] font-mono text-neutral-400 uppercase hidden md:block">

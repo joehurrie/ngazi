@@ -24,7 +24,7 @@ export default function Cta() {
                   href="/contact"
                   className="block px-8 py-3.5 bg-transparent rounded-xl text-xs font-semibold tracking-widest uppercase text-neutral-900 hover:bg-neutral-100 transition-colors"
                 >
-                  Start a Project
+                  Get Started
                 </Link>
               </GlowingBorderCard>
             </div>
