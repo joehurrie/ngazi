@@ -72,10 +72,10 @@ export default function Services() {
           </div>
         </div>
         
-        <div className="flex lg:col-span-1 items-center justify-center mt-8 lg:mt-5 lg:ml-8">
+        <div className="flex lg:col-span-1 items-center justify-center mt-8 lg:mt-0">
           <div className="w-full h-[500px] overflow-hidden flex items-center justify-center">
             <div className="relative h-full wall-container flex justify-center">
-              <div className="wall-grid flex gap-6 lg:w-auto w-[540px] justify-center">
+              <div className="wall-grid flex gap-6 w-full justify-center">
                 <div className="wall-column-up flex flex-col gap-6">
                   {[...wallCardsCol1, ...wallCardsCol1].map((card, index) => (
                     <WallCard key={`col1-${index}`} icon={card.icon} text={card.text} />
