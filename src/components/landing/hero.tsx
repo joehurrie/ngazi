@@ -4,8 +4,18 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="max-w-[1400px] mx-auto px-6 py-24 md:py-32 border-b border-neutral-200/60">
-      <div className="max-w-5xl">
+    <section className="relative max-w-[1400px] mx-auto px-6 py-24 md:py-32 border-b border-neutral-200/60 overflow-hidden">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-20 mix-blend-screen"
+        style={{ filter: 'hue-rotate(150deg) contrast(1.2)' }}
+      >
+        <source src="https://cdn.coverr.co/videos/coverr-digital-lines-moving-background-4770/1080p.mp4" type="video/mp4" />
+      </video>
+      <div className="relative z-10 max-w-5xl">
         <AnimateOnScroll>
           <div className="inline-flex items-center gap-3 px-3 py-1.5 rounded-full bg-neutral-100 border border-neutral-200 mb-8">
             <span className="relative flex h-2 w-2">
