@@ -1,4 +1,3 @@
-import Cta from '@/components/landing/cta';
 import Faq from '@/components/landing/faq';
 import Hero from '@/components/landing/hero';
 import Marquee from '@/components/landing/marquee';
@@ -17,7 +16,6 @@ export default function Home() {
       <Process />
       <Testimonials />
       <Faq />
-      <Cta />
     </>
   );
 }
