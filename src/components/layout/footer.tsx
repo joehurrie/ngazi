@@ -1,18 +1,17 @@
 import Link from 'next/link';
-import { AnimateOnScroll } from '../client/animate-on-scroll';
 
 export default function Footer() {
   return (
     <footer className="bg-neutral-900 text-neutral-400 font-light relative z-20">
       <div className="max-w-[1400px] mx-auto px-6">
         {/* Top section */}
-        <div className="relative flex flex-col md:flex-row justify-between items-start md:items-end py-16 md:py-24">
-          <h2 className="text-[10rem] md:text-[14rem] lg:text-[18rem] font-medium tracking-tighter text-white/5 leading-none absolute -left-4 -top-2 select-none">
+        <div className="relative flex flex-col md:flex-row justify-between items-start md:items-end py-16 md:py-24 overflow-hidden">
+          <h2 className="text-[8rem] sm:text-[10rem] md:text-[14rem] lg:text-[18rem] font-medium tracking-tighter text-white/5 leading-none absolute -left-4 top-8 sm:top-2 select-none">
             NGAZI
           </h2>
 
-          <div className="relative z-10 w-full flex justify-end">
-            <div className="text-right">
+          <div className="relative z-10 w-full flex flex-col items-center md:items-end">
+            <div className="text-center md:text-right">
               <a
                 href="mailto:hello@ngazi.lab"
                 className="text-2xl md:text-3xl lg:text-4xl text-white hover:text-neutral-300 transition-colors"
@@ -50,9 +49,14 @@ export default function Footer() {
                     Services
                   </Link>
                 </li>
+                 <li>
+                  <Link href="/pricing" className="hover:text-white transition-colors">
+                    Pricing
+                  </Link>
+                </li>
                 <li>
                   <Link href="/contact" className="hover:text-white transition-colors">
-                    Agency
+                    Contact
                   </Link>
                 </li>
               </ul>
@@ -105,7 +109,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="col-span-12 md:col-span-4 flex md:justify-end items-end text-right md:text-right pt-8 md:pt-0">
+          <div className="col-span-12 md:col-span-4 flex md:justify-end items-end text-left md:text-right pt-8 md:pt-0">
             <p className="text-[10px] font-mono uppercase text-neutral-600 tracking-widest leading-relaxed">
               © {new Date().getFullYear()} Ngazi Digital Lab.
               <br />
