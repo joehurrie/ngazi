@@ -60,28 +60,42 @@ export default function Header() {
       {/* Mobile Menu Overlay */}
       <div
         className={cn(
-          'fixed inset-0 z-[100] bg-white transform transition-transform duration-300 ease-in-out',
-          isMenuOpen ? 'translate-y-0' : '-translate-y-full'
+          'fixed inset-0 z-[100] bg-black/50 transition-opacity duration-300 ease-in-out md:hidden',
+          isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         )}
+        onClick={() => setIsMenuOpen(false)}
       >
-        <div className="flex flex-col items-center justify-center h-full">
-          <div className="absolute top-0 right-0 p-4">
-             <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
-              <X size={24} />
-            </Button>
-          </div>
-          <nav className="flex flex-col items-center gap-8 text-center">
-             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsMenuOpen(false)}
-                className="text-2xl font-medium text-neutral-800 hover:text-neutral-500 transition-colors"
-              >
-                {link.label}
+        <div
+          className={cn(
+            'fixed top-0 left-0 h-full w-4/5 max-w-sm bg-white shadow-xl transform transition-transform duration-300 ease-in-out',
+            isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+          )}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex flex-col h-full">
+            <div className="flex justify-between items-center p-4 border-b border-neutral-200">
+               <Link href="/" className="flex items-center gap-3" onClick={() => setIsMenuOpen(false)}>
+                <div className="w-5 h-5 bg-neutral-900 flex items-center justify-center rounded-sm">
+                  <div className="w-2 h-2 bg-white"></div>
+                </div>
               </Link>
-            ))}
-          </nav>
+               <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
+                <X size={24} />
+              </Button>
+            </div>
+            <nav className="flex flex-col gap-4 p-8 text-left">
+               {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-2xl font-medium text-neutral-800 hover:text-neutral-500 transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
         </div>
       </div>
     </>
