@@ -62,7 +62,7 @@ export default function Process() {
               key={step.num}
               className="p-8 border border-neutral-200/60 rounded-xl bg-white/50 backdrop-blur-sm shadow-lg shadow-neutral-100/50 md:mb-8"
               style={{
-                position: index > 0 ? 'sticky' : 'relative',
+                position: 'sticky',
                 top: `calc(6rem + ${index * 2}rem)`,
               }}
             >
