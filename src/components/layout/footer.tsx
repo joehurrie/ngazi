@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 
 export default function Footer() {
@@ -12,7 +13,7 @@ export default function Footer() {
             </h2>
           </div>
 
-          <div className="relative z-10 w-full flex flex-col items-start">
+          <div className="relative z-10 w-full flex flex-col items-start md:items-end">
             <div className="text-left">
               <a
                 href="mailto:hello@ngazi.lab"
