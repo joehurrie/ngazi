@@ -31,9 +31,9 @@ export default function Hero() {
 
         <AnimateOnScroll style={{ animationDelay: '100ms' }}>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter text-neutral-900 leading-[0.95] mb-10">
-            Designing the
+            Designing the next
             <br />
-            <span className="text-neutral-400">digital future.</span>
+            <span className="text-neutral-400">generation of digital products.</span>
           </h1>
         </AnimateOnScroll>
 
