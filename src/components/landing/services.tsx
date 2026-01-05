@@ -44,8 +44,8 @@ export default function Services() {
       id="services"
       className="relative overflow-hidden border-b border-neutral-200/60 bg-neutral-50/30"
     >
-      <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row lg:min-h-[800px]">
-        <div className="w-full lg:w-1/2 px-6 py-20 lg:py-32 flex flex-col justify-center relative z-10 lg:bg-gradient-to-r from-white via-white to-transparent">
+      <div className="max-w-[1400px] mx-auto flex flex-col">
+        <div className="w-full px-6 py-20 lg:py-32 flex flex-col justify-center relative z-10">
           <div className="text-[10px] font-mono uppercase text-neutral-400 mb-6 tracking-widest">
             01 — Expertise
           </div>
@@ -72,9 +72,9 @@ export default function Services() {
           </div>
         </div>
         
-        <div className="w-full lg:w-1/2 lg:absolute lg:right-0 lg:top-0 lg:bottom-0">
-          <div className="relative h-[600px] lg:h-full overflow-hidden pointer-events-none lg:pointer-events-auto mt-12 lg:mt-0">
-            <div className="wall-container w-full h-full absolute top-[-10%] sm:right-[-40%] md:right-[-30%] lg:right-[-20%] scale-90 sm:scale-100">
+        <div className="w-full">
+          <div className="relative h-[600px] overflow-hidden pointer-events-none mt-12 lg:mt-0">
+            <div className="wall-container w-full h-full absolute sm:right-[-40%] md:right-[-30%] lg:right-[-20%] scale-90 sm:scale-100">
               <div className="wall-grid flex gap-6">
                 <div className="wall-column-up flex flex-col gap-6">
                   {[...wallCardsCol1, ...wallCardsCol1.slice(0, 2)].map((card, index) => (
@@ -88,7 +88,6 @@ export default function Services() {
                 </div>
               </div>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-white z-20"></div>
           </div>
         </div>
       </div>
