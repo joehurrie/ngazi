@@ -56,12 +56,15 @@ export default function Process() {
           </AnimateOnScroll>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-8 md:space-y-0">
           {steps.map((step, index) => (
             <AnimateOnScroll
               key={step.num}
-              className="p-8 border border-neutral-200/60 rounded-xl bg-white/50 backdrop-blur-sm shadow-lg shadow-neutral-100/50"
-              style={index > 0 ? { position: 'sticky', top: `calc(6rem + ${index * 2}rem)` } : {}}
+              className="p-8 border border-neutral-200/60 rounded-xl bg-white/50 backdrop-blur-sm shadow-lg shadow-neutral-100/50 md:mb-8"
+              style={{
+                position: index > 0 ? 'sticky' : 'relative',
+                top: `calc(6rem + ${index * 2}rem)`,
+              }}
             >
               <div className="flex items-start gap-6">
                 <div className="w-8 h-8 bg-neutral-100 rounded flex items-center justify-center mb-4 text-neutral-600 font-mono text-xs shrink-0 mt-1">
