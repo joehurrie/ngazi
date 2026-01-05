@@ -6,7 +6,7 @@ const services = [
   {
     icon: MonitorSmartphone,
     title: 'Web & Mobile Development',
-    description: 'Custom digital products built for scale using React, Flutter, and Next.js.',
+    description: 'Custom digital products built using modern cutting edge technologies.',
   },
   {
     icon: PenTool,
