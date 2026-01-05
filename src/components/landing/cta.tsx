@@ -9,7 +9,7 @@ export default function Cta() {
       <div className="rounded-2xl p-12 md:p-24 text-center relative overflow-hidden isolate">
         <div className="relative z-10 max-w-2xl mx-auto">
           <AnimateOnScroll>
-            <h2 className="text-5xl md:text-7xl font-medium tracking-tighter text-neutral-900 mb-8">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter text-neutral-900 leading-[0.95] mb-8">
               Ready to scale?
             </h2>
             <p className="text-neutral-500 font-light text-lg mb-10">
