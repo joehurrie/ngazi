@@ -1,3 +1,4 @@
+
 import { AnimateOnScroll } from '@/components/client/animate-on-scroll';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -41,8 +42,7 @@ export default function Hero() {
           className="flex flex-col md:flex-row md:items-end justify-between gap-12"
         >
           <p className="text-lg md:text-xl text-neutral-500 font-light max-w-xl leading-relaxed mb-12 md:mb-0">
-            We are a design agency utilizing modern technology to create unique, user-centered
-            designs. From branding to mobile development, we help businesses scale online.
+            From branding, web design to mobile app development.
           </p>
 
           <div className="flex items-center gap-6">
