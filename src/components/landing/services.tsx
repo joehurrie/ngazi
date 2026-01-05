@@ -44,7 +44,7 @@ export default function Services() {
       id="services"
       className="relative overflow-hidden border-b border-neutral-200/60 bg-neutral-50/30"
     >
-      <div className="max-w-[1400px] mx-auto px-6 py-20 lg:py-32 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8">
+      <div className="max-w-[1400px] mx-auto px-6 py-20 lg:py-32 grid grid-cols-1 gap-16">
         <div className="relative z-10">
           <div className="text-[10px] font-mono uppercase text-neutral-400 mb-6 tracking-widest">
             01 — Expertise
@@ -72,7 +72,7 @@ export default function Services() {
           </div>
         </div>
         
-        <div className="flex lg:col-span-1 items-center justify-center lg:pt-[30px]">
+        <div className="w-full flex items-center justify-center pt-8 lg:pt-[60px]">
           <div className="w-full h-[340px] overflow-hidden flex items-center justify-center">
             <div className="relative h-full wall-container flex justify-center">
               <div className="wall-grid flex gap-6 w-full justify-center">
