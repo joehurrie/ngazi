@@ -5,6 +5,7 @@ import Process from '@/components/landing/process';
 import Services from '@/components/landing/services';
 import Testimonials from '@/components/landing/testimonials';
 import Work from '@/components/landing/work';
+import Cta from '@/components/landing/cta';
 import { AnimateOnScroll } from '@/components/client/animate-on-scroll';
 
 export default function Home() {
@@ -28,6 +29,9 @@ export default function Home() {
       </AnimateOnScroll>
       <AnimateOnScroll>
         <Faq />
+      </AnimateOnScroll>
+      <AnimateOnScroll>
+        <Cta />
       </AnimateOnScroll>
     </>
   );
