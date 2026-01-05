@@ -44,7 +44,7 @@ export default function Services() {
       id="services"
       className="relative overflow-hidden border-b border-neutral-200/60 bg-neutral-50/30"
     >
-      <div className="max-w-[1400px] mx-auto px-6 py-20 lg:py-32 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">
+      <div className="max-w-[1400px] mx-auto px-6 py-20 lg:py-32 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8">
         <div className="relative z-10">
           <div className="text-[10px] font-mono uppercase text-neutral-400 mb-6 tracking-widest">
             01 — Expertise
@@ -72,18 +72,20 @@ export default function Services() {
           </div>
         </div>
         
-        <div className="w-full h-[500px] overflow-hidden flex items-center justify-center">
-          <div className="relative h-full wall-container flex justify-center">
-            <div className="wall-grid flex gap-6">
-              <div className="wall-column-up flex flex-col gap-6">
-                {[...wallCardsCol1, ...wallCardsCol1].map((card, index) => (
-                  <WallCard key={`col1-${index}`} icon={card.icon} text={card.text} />
-                ))}
-              </div>
-              <div className="wall-column-down flex flex-col gap-6 pt-20">
-                {[...wallCardsCol2, ...wallCardsCol2].map((card, index) => (
-                  <WallCard key={`col2-${index}`} icon={card.icon} text={card.text} />
-                ))}
+        <div className="lg:col-span-1 flex items-center justify-center lg:mt-5 mr-[10px] lg:mr-0">
+          <div className="w-full h-[500px] overflow-hidden flex items-center justify-center">
+            <div className="relative h-full wall-container flex justify-center">
+              <div className="wall-grid flex gap-6">
+                <div className="wall-column-up flex flex-col gap-6">
+                  {[...wallCardsCol1, ...wallCardsCol1].map((card, index) => (
+                    <WallCard key={`col1-${index}`} icon={card.icon} text={card.text} />
+                  ))}
+                </div>
+                <div className="wall-column-down flex flex-col gap-6 pt-20">
+                  {[...wallCardsCol2, ...wallCardsCol2].map((card, index) => (
+                    <WallCard key={`col2-${index}`} icon={card.icon} text={card.text} />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
