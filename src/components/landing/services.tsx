@@ -72,8 +72,8 @@ export default function Services() {
           </div>
         </div>
         
-        <div className="w-full flex items-center justify-center pt-8 lg:pt-[60px]">
-          <div className="w-full h-[340px] overflow-hidden flex items-center justify-center">
+        <div className="w-full flex items-center justify-center lg:pt-[60px]">
+          <div className="w-full lg:w-[60%] h-[340px] overflow-hidden flex items-center justify-center">
             <div className="relative h-full wall-container flex justify-center">
               <div className="wall-grid flex gap-6 w-full justify-center">
                 <div className="wall-column-up flex flex-col gap-6">
