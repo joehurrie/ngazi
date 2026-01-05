@@ -44,8 +44,8 @@ export default function Services() {
       id="services"
       className="relative overflow-hidden border-b border-neutral-200/60 bg-neutral-50/30"
     >
-      <div className="max-w-[1400px] mx-auto flex flex-col">
-        <div className="w-full px-6 py-20 lg:py-32 flex flex-col justify-center items-center text-center relative z-10">
+      <div className="max-w-[1400px] mx-auto px-6 py-20 lg:py-32 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">
+        <div className="relative z-10">
           <div className="text-[10px] font-mono uppercase text-neutral-400 mb-6 tracking-widest">
             01 — Expertise
           </div>
@@ -55,7 +55,7 @@ export default function Services() {
             <span className="text-neutral-400">Custom Solutions</span>
           </h2>
 
-          <div className="space-y-10 max-w-md text-left">
+          <div className="space-y-10 max-w-md">
             {services.map((service, index) => (
               <div key={index} className="flex gap-5 group">
                 <div className="w-10 h-10 rounded-lg bg-white border border-neutral-200 flex items-center justify-center shadow-sm group-hover:border-neutral-400 transition-colors shrink-0">
@@ -72,7 +72,7 @@ export default function Services() {
           </div>
         </div>
         
-        <div className="w-full h-[500px] overflow-hidden">
+        <div className="w-full h-[500px] overflow-hidden flex items-center justify-center">
           <div className="relative h-full wall-container flex justify-center">
             <div className="wall-grid flex gap-6">
               <div className="wall-column-up flex flex-col gap-6">
