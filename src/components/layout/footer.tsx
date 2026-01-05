@@ -13,7 +13,7 @@ export default function Footer() {
             </h2>
           </div>
 
-          <div className="relative z-10 w-full flex flex-col items-start md:items-end">
+          <div className="relative z-10 w-full flex flex-col items-start">
             <div className="text-left">
               <a
                 href="mailto:hello@ngazi.lab"
