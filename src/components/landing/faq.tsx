@@ -1,3 +1,4 @@
+
 import {
   Accordion,
   AccordionContent,
@@ -43,31 +44,29 @@ export default function Faq() {
   return (
     <section className="max-w-[1400px] mx-auto px-6 py-24 md:py-32">
       <AnimateOnScroll>
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="text-[10px] font-mono uppercase text-neutral-400 mb-4 tracking-widest">
-              05 — FAQs
-            </div>
-            <h2 className="text-4xl font-medium tracking-tight text-neutral-900">
-              Common Questions
-            </h2>
-            <p className="mt-4 text-lg text-neutral-500 font-light">
-              Here are some of the most common questions we get from clients.
-            </p>
+        <div className="mb-16">
+          <div className="text-[10px] font-mono uppercase text-neutral-400 mb-4 tracking-widest">
+            05 — FAQs
           </div>
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem value={`item-${index}`} key={index}>
-                <AccordionTrigger className="text-left font-medium text-base hover:no-underline">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-neutral-500 text-sm font-light leading-relaxed">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <h2 className="text-4xl md:text-5xl font-medium tracking-tighter text-neutral-900">
+            Common Questions
+          </h2>
+          <p className="mt-4 text-lg text-neutral-500 font-light max-w-2xl">
+            Here are some of the most common questions we get from clients.
+          </p>
         </div>
+        <Accordion type="single" collapsible className="w-full max-w-3xl">
+          {faqs.map((faq, index) => (
+            <AccordionItem value={`item-${index}`} key={index}>
+              <AccordionTrigger className="text-left font-medium text-base hover:no-underline">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-neutral-500 text-sm font-light leading-relaxed">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </AnimateOnScroll>
     </section>
   );
