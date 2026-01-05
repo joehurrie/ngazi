@@ -1,97 +1,74 @@
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-900 text-neutral-300 font-light">
-      <div className="max-w-[1400px] mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
-          <div>
-            <h2 className="text-5xl md:text-[10rem] font-bold leading-none tracking-tighter text-white">
-              NGAZI
-            </h2>
-            <p className="font-mono text-sm uppercase tracking-widest text-neutral-400 mt-4">
-              nairobi.remote
-            </p>
-            <p className="text-neutral-400 max-w-sm mt-8 leading-relaxed">
-              We are a design and development partner for ambitious companies. We build digital
-              products that are not only beautiful but also solve real problems and drive business
-              growth.
-            </p>
-          </div>
-          <div className="flex flex-col justify-between">
-            <div>
-              <h3 className="text-3xl font-medium text-white tracking-tight leading-tight">
-                Have a project in mind? Let's build the future, together.
-              </h3>
-              <Link
-                href="/contact"
-                className="group inline-flex items-center gap-3 text-2xl font-medium text-white mt-8 hover:text-neutral-300 transition-colors"
-              >
-                Get in touch
-                <ArrowRight
-                  size={28}
-                  className="group-hover:translate-x-1 transition-transform"
-                />
-              </Link>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mt-16 text-sm">
-              <div>
-                <h4 className="text-[10px] font-mono uppercase text-neutral-500 mb-4 tracking-widest">
-                  Studio
-                </h4>
-                <ul className="space-y-3">
-                  <li>
-                    <Link href="/#work" className="hover:text-white">
-                      Work
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/#services" className="hover:text-white">
-                      Services
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/#process" className="hover:text-white">
-                      Process
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-[10px] font-mono uppercase text-neutral-500 mb-4 tracking-widest">
-                  Connect
-                </h4>
-                <ul className="space-y-3">
-                  <li>
-                    <a href="#" className="hover:text-white">
-                      Twitter
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white">
-                      LinkedIn
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-white">
-                      Instagram
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+    <footer className="bg-neutral-900 text-neutral-400 font-light">
+      <div className="max-w-[1400px] mx-auto px-6 pt-24 pb-12">
+        {/* Top Section */}
+        <div className="flex justify-between items-center mb-20">
+          <h2 className="text-[10rem] font-bold leading-none tracking-tighter text-neutral-800/50 select-none">
+            NGAZI
+          </h2>
+          <div className="text-right">
+            <a
+              href="mailto:hello@ngazi.lab"
+              className="text-3xl font-medium text-white hover:text-neutral-300 transition-colors"
+            >
+              hello@ngazi.lab
+            </a>
+            <p className="text-sm text-neutral-500 mt-2">Nairobi • Remote Worldwide</p>
           </div>
         </div>
-        <div className="border-t border-neutral-800 mt-20 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-neutral-500 uppercase tracking-wide">
-          <p>© 2024 Ngazi Digital Lab. All rights reserved.</p>
-          <div className="flex gap-4 mt-4 md:mt-0">
-            <Link href="#" className="hover:text-neutral-300">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="hover:text-neutral-300">
-              Terms of Service
-            </Link>
+
+        {/* Separator */}
+        <div className="border-t border-neutral-800"></div>
+
+        {/* Bottom Section */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-12 text-sm">
+          {/* Sitemap */}
+          <div>
+            <h4 className="text-[10px] font-mono uppercase text-neutral-500 mb-4 tracking-widest">
+              Sitemap
+            </h4>
+            <ul className="space-y-3">
+              <li><Link href="/#work" className="hover:text-white transition-colors">Work</Link></li>
+              <li><Link href="/#services" className="hover:text-white transition-colors">Services</Link></li>
+              <li><Link href="/#process" className="hover:text-white transition-colors">Process</Link></li>
+               <li><Link href="/contact" className="hover:text-white transition-colors">Agency</Link></li>
+            </ul>
+          </div>
+
+          {/* Socials */}
+          <div>
+            <h4 className="text-[10px] font-mono uppercase text-neutral-500 mb-4 tracking-widest">
+              Socials
+            </h4>
+            <ul className="space-y-3">
+              <li><a href="#" className="hover:text-white transition-colors">LinkedIn</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Twitter / X</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Dribbble</a></li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="text-[10px] font-mono uppercase text-neutral-500 mb-4 tracking-widest">
+              Legal
+            </h4>
+            <ul className="space-y-3">
+              <li><Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link href="#" className="hover:text-white transition-colors">Terms of Service</Link></li>
+            </ul>
+          </div>
+          
+          {/* Copyright */}
+          <div className="md:text-right self-end">
+             <p className="text-[10px] text-neutral-600 uppercase tracking-wide">
+              © 2024 Ngazi Digital Lab.
+              <br/>
+              All rights reserved.
+            </p>
           </div>
         </div>
       </div>
