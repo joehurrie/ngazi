@@ -24,7 +24,7 @@ export default function Hero() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-neutral-900"></span>
             </span>
             <span className="text-[10px] font-mono text-neutral-600 uppercase tracking-widest">
-              Ngazi Systems Online
+              Ngazi Digital Lab
             </span>
           </div>
         </AnimateOnScroll>
