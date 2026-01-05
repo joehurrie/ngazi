@@ -30,14 +30,14 @@ export default function Testimonials() {
     >
       <div className="max-w-[1400px] mx-auto px-6">
         <AnimateOnScroll>
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="mb-16">
             <div className="text-[10px] font-mono uppercase text-neutral-400 mb-4 tracking-widest">
               04 — Testimonials
             </div>
             <h2 className="text-4xl md:text-5xl font-medium tracking-tighter text-neutral-900">
               Trusted by Innovators
             </h2>
-            <p className="mt-4 text-lg text-neutral-500 font-light">
+            <p className="mt-4 text-lg text-neutral-500 font-light max-w-2xl">
               Hear what our clients have to say about their experience working with us.
             </p>
           </div>
