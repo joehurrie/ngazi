@@ -1,9 +1,9 @@
 import { BrandIcon } from "../icons/brand-icon";
 
 const brands = [
-  'react', 'figma', 'framer', 'webflow', 'flutter', 'stripe', 'vercel'
+  'react', 'figma', 'flutter', 'stripe', 'vercel'
 ] as const;
-const allBrands = [...brands, ...brands];
+const allBrands = [...brands, ...brands, ...brands];
 
 export default function Marquee() {
   return (
