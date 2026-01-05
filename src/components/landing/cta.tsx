@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { GlowingBorderCard } from '../ui/glowing-border-card';
 import { AnimateOnScroll } from '../client/animate-on-scroll';
@@ -7,7 +8,7 @@ export default function Cta() {
     <section className="py-24 md:py-32 bg-neutral-50/50">
       <AnimateOnScroll>
         <div className="max-w-[1400px] mx-auto px-6">
-          <div className="max-w-2xl mx-auto flex flex-col items-center md:items-end md:text-right">
+          <div className="max-w-2xl mx-auto flex flex-col items-end text-right">
             <div className="text-[10px] font-mono uppercase text-neutral-400 mb-4 tracking-widest">
               06 — Let's Connect
             </div>

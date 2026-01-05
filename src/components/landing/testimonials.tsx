@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { AnimateOnScroll } from '../client/animate-on-scroll';
 
@@ -30,8 +31,8 @@ export default function Testimonials() {
     >
       <div className="max-w-[1400px] mx-auto px-6">
         <AnimateOnScroll>
-          <div className="mb-16 flex flex-col items-start md:items-end">
-            <div className="md:text-right">
+          <div className="mb-16 flex flex-col items-end">
+            <div className="text-right">
               <div className="text-[10px] font-mono uppercase text-neutral-400 mb-4 tracking-widest">
                 04 — Testimonials
               </div>
