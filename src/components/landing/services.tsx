@@ -32,8 +32,8 @@ const wallCardsCol2 = [
 ];
 
 const WallCard = ({ icon: Icon, text }: { icon: React.ElementType, text: string }) => (
-  <div className="wall-card w-64 h-24 rounded-xl p-6 flex flex-col justify-between">
-    <Icon size={32} className="text-neutral-800" strokeWidth={1.5} />
+  <div className="wall-card w-32 h-24 rounded-xl p-4 flex flex-col justify-between">
+    <Icon size={24} className="text-neutral-800" strokeWidth={1.5} />
     <span className="text-xs font-mono text-neutral-500">{text}</span>
   </div>
 );
@@ -72,7 +72,7 @@ export default function Services() {
           </div>
         </div>
         
-        <div className="flex lg:col-span-1 items-center justify-center mt-8 lg:mt-0">
+        <div className="flex lg:col-span-1 items-center justify-center lg:mt-0">
           <div className="w-full h-[340px] overflow-hidden flex items-center justify-center">
             <div className="relative h-full wall-container flex justify-center">
               <div className="wall-grid flex gap-6 w-full justify-center">
