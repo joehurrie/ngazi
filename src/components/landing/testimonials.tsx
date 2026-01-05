@@ -30,16 +30,18 @@ export default function Testimonials() {
     >
       <div className="max-w-[1400px] mx-auto px-6">
         <AnimateOnScroll>
-          <div className="mb-16">
-            <div className="text-[10px] font-mono uppercase text-neutral-400 mb-4 tracking-widest">
-              04 — Testimonials
+          <div className="mb-16 flex flex-col items-start md:items-end">
+            <div className="md:text-right">
+              <div className="text-[10px] font-mono uppercase text-neutral-400 mb-4 tracking-widest">
+                04 — Testimonials
+              </div>
+              <h2 className="text-4xl md:text-5xl font-medium tracking-tighter text-neutral-900">
+                Trusted by Innovators
+              </h2>
+              <p className="mt-4 text-lg text-neutral-500 font-light max-w-2xl">
+                Hear what our clients have to say about their experience working with us.
+              </p>
             </div>
-            <h2 className="text-4xl md:text-5xl font-medium tracking-tighter text-neutral-900">
-              Trusted by Innovators
-            </h2>
-            <p className="mt-4 text-lg text-neutral-500 font-light max-w-2xl">
-              Hear what our clients have to say about their experience working with us.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
