@@ -53,7 +53,7 @@ export default function Work() {
           <div key={index}>
             <GlowingBorderCard
               animationDirection={project.animationDirection as 'clockwise' | 'counter-clockwise'}
-              className="p-8 flex flex-col justify-between"
+              className="p-8 flex flex-col justify-between shadow-lg shadow-neutral-100/50"
             >
               <div className="mb-8 relative h-[350px] rounded-lg overflow-hidden group bg-neutral-100 flex items-center justify-center">
                 {project.imageUrl && (
