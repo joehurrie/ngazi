@@ -1,7 +1,7 @@
 import { BrandIcon } from "../icons/brand-icon";
 
 const brands = [
-  'react', 'figma', 'flutter', 'stripe', 'vercel'
+  'figma', 'webflow', 'framer', 'chatgpt', 'google', 'react', 'vercel'
 ] as const;
 const allBrands = [...brands, ...brands, ...brands];
 
@@ -14,8 +14,8 @@ export default function Marquee() {
             <BrandIcon 
               key={`${brand}-${index}`} 
               name={brand} 
-              width={brand === 'stripe' ? '36' : '28'} 
-              height={brand === 'stripe' ? '36' : '28'}
+              width="28"
+              height="28"
             />
           ))}
         </div>
