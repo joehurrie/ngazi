@@ -16,6 +16,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { sendContactMessage } from './actions';
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -44,15 +45,21 @@ export default function ContactPage() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    // In a real app, you'd send this data to a server
-    console.log(values);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    toast({
-      title: 'Message Sent!',
-      description: "We've received your message and will get back to you shortly.",
-    });
-    form.reset();
+    const result = await sendContactMessage(values);
+
+    if (result.success) {
+      toast({
+        title: 'Message Sent!',
+        description: "We've received your message and will get back to you shortly.",
+      });
+      form.reset();
+    } else {
+      toast({
+        variant: 'destructive',
+        title: 'Uh oh! Something went wrong.',
+        description: 'Could not send your message. Please try again.',
+      });
+    }
   }
 
   return (
