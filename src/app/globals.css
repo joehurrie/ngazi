@@ -195,6 +195,11 @@ body {
     animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
+.animate-on-scroll.animate .wall-column-up,
+.animate-on-scroll.animate .wall-column-down {
+  animation-play-state: running;
+}
+
 /* --- NOISE TEXTURE (SUBTLE) --- */
 .noise-overlay {
     position: fixed;
@@ -249,8 +254,8 @@ body {
     transform: scale(1.05);
     transform-style: preserve-3d;
 }
-.wall-column-up { animation: scrollUp 45s linear infinite; }
-.wall-column-down { animation: scrollDown 45s linear infinite; }
+.wall-column-up { animation: scrollUp 22.5s linear infinite; animation-play-state: paused; }
+.wall-column-down { animation: scrollDown 22.5s linear infinite; animation-play-state: paused; }
 
 @keyframes scrollUp { from { transform: translateY(0); } to { transform: translateY(-50%); } }
 @keyframes scrollDown { from { transform: translateY(-50%); } to { transform: translateY(0); } }
@@ -273,3 +278,5 @@ body {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #d4d4d4; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #a3a3a3; }
+
+    
