@@ -5,15 +5,15 @@ export default function Footer() {
     <footer className="bg-neutral-900 text-neutral-400 font-light relative z-20">
       <div className="max-w-[1400px] mx-auto px-6">
         {/* Top section */}
-        <div className="relative grid grid-cols-1 md:grid-cols-2 items-end py-16 md:py-24 overflow-hidden">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 items-end py-16 md:py-24 overflow-hidden gap-8 md:gap-0">
           <div>
             <h2 className="text-[8rem] sm:text-[10rem] md:text-[14rem] lg:text-[18rem] font-medium tracking-tighter text-white/5 leading-none -ml-4 select-none">
               NGAZI
             </h2>
           </div>
 
-          <div className="relative z-10 w-full flex flex-col items-center md:items-end -mt-16 md:mt-0">
-            <div className="text-center md:text-right">
+          <div className="relative z-10 w-full flex flex-col items-start md:items-end">
+            <div className="text-left md:text-right">
               <a
                 href="mailto:hello@ngazi.lab"
                 className="text-2xl md:text-3xl lg:text-4xl text-white hover:text-neutral-300 transition-colors"
