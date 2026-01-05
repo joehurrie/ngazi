@@ -72,7 +72,7 @@ export default function Services() {
           </div>
         </div>
         
-        <div className="lg:col-span-1 flex items-center justify-center mt-20 lg:mt-5">
+        <div className="hidden lg:flex lg:col-span-1 items-center justify-center mt-20 lg:mt-5 lg:ml-8">
           <div className="w-full h-[500px] overflow-hidden flex items-center justify-center">
             <div className="relative h-full wall-container flex justify-center">
               <div className="wall-grid flex gap-6 lg:w-auto w-[540px] justify-center">
