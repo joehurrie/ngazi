@@ -74,7 +74,7 @@ export default function Services() {
         
         <div className="w-full lg:w-1/2 lg:absolute lg:right-0 lg:top-0 lg:bottom-0">
           <div className="relative h-[600px] lg:h-full overflow-hidden pointer-events-none lg:pointer-events-auto mt-12 lg:mt-0">
-            <div className="wall-container w-full h-full absolute top-[-10%] right-[-20%]">
+            <div className="wall-container w-full h-full absolute top-[-10%] sm:right-[-40%] md:right-[-30%] lg:right-[-20%] scale-90 sm:scale-100">
               <div className="wall-grid flex gap-6">
                 <div className="wall-column-up flex flex-col gap-6">
                   {[...wallCardsCol1, ...wallCardsCol1.slice(0, 2)].map((card, index) => (
